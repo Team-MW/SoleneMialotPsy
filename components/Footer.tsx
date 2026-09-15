@@ -34,7 +34,18 @@ export function Footer() {
           <HeartIcon className="h-4 w-4 text-gold" />
         </p>
         <p className="mt-6 text-xs text-muted">
-          © {new Date().getFullYear()} {SITE.name} — Site vitrine
+          © {new Date().getFullYear()} {SITE.name}
+        </p>
+        <p className="mt-2 text-xs text-muted">
+          Réalisée par{" "}
+          <a
+            href="https://microdidact.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-sage-deep underline decoration-sage/40 underline-offset-4 transition hover:text-ink"
+          >
+            Microdidact
+          </a>
         </p>
       </div>
     </footer>
