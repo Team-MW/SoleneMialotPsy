@@ -1,13 +1,12 @@
 export const SITE = {
   name: "Solène Mialot",
   role: "Psychologue clinicienne",
-  tagline:
-    "Praticienne EMDR Europe et praticienne en hypnose ericksonienne",
+  tagline: "Psychologue clinicienne à Saint-Jean – Cabinet et téléconsultation",
   doctolib: "https://www.doctolib.fr/psychologue/pin-balma/solene-mialot",
   address: {
     street: "22 boulevard des Pensées",
     city: "31240 Saint-Jean",
-    note: "et non plus à Balma",
+    note: "près de Toulouse",
     maps: "https://www.google.com/maps/search/?api=1&query=22+boulevard+des+Pens%C3%A9es+31240+Saint-Jean",
     embed:
       "https://maps.google.com/maps?q=22%20boulevard%20des%20Pens%C3%A9es%2031240%20Saint-Jean&t=&z=15&ie=UTF8&iwloc=&output=embed",
@@ -18,15 +17,76 @@ export const SITE = {
     { day: "Dimanche — Lundi", time: "Fermé" },
   ],
   price: "60 €",
-  payment: "Espèces, carte bancaire, virement",
+  duration: "1 heure",
+  payment: "Espèces, virement, carte bancaire",
   access: "Rez-de-chaussée, parking gratuit",
+  public: "Adultes",
 } as const;
 
 export const NAV = [
   { href: "/", label: "Accueil" },
-  { href: "/accompagnement", label: "Accompagnement" },
-  { href: "/cabinet", label: "Le cabinet" },
-  { href: "/infos", label: "Infos pratiques" },
+  { href: "/cabinet", label: "Qui suis-je" },
+  { href: "/accompagnement", label: "Mon accompagnement" },
+  { href: "/infos", label: "Tarifs et modalités" },
+] as const;
+
+export const MOTIVES = [
+  "anxiété, stress et ruminations",
+  "manque de confiance ou difficultés d’estime de soi",
+  "difficultés relationnelles et affectives",
+  "peur de l’abandon, difficultés à poser ses limites",
+  "événements douloureux ou traumatiques",
+  "deuil, séparation ou changement important",
+  "difficultés liées à une période de transition",
+  "sentiment de mal-être, épuisement émotionnel ou perte de repères",
+  "répétition de certains fonctionnements ou situations dans votre vie",
+] as const;
+
+export const FORMATIONS = [
+  {
+    year: "2026",
+    title: "Psychopathologie de la périnatalité — MOOC",
+  },
+  {
+    year: "2024",
+    title: "Initiation à la psychogénéalogie",
+  },
+  {
+    year: "2024",
+    title: "Pratique de la thérapie des schémas — CEFTI",
+  },
+  {
+    year: "2022",
+    title: "Formation Praticienne Hypnose ericksonienne — EFPNL",
+  },
+  {
+    year: "2017",
+    title: "Thérapie EMDR — EFPE (31)",
+  },
+  {
+    year: "2017",
+    title:
+      "Formation « Trouble de Stress Post-traumatique et Deuil Compliqué » — FUN-MOOC",
+  },
+  {
+    year: "2017",
+    title:
+      "Master en psychologie clinique, psychopathologie et psychologie de la santé — Accompagnement des personnes en situation de dépendance — Institut Catholique de Toulouse (ICT)",
+  },
+  {
+    year: "2014",
+    title:
+      "D.U. Psychologie interculturelle — Université de Bordeaux (Victor Segalen) UFR II — Bordeaux",
+  },
+  {
+    year: "2014",
+    title: "D.I.U. Addictologie — Université de Tours",
+  },
+  {
+    year: "2011",
+    title:
+      "Licence de psychologie clinique — Université de Bordeaux (Victor Segalen) UFR II — Bordeaux",
+  },
 ] as const;
 
 export type FaqItem = { question: string; answer: string };
@@ -36,47 +96,52 @@ export const FAQ = {
     {
       question: "Comment prendre rendez-vous ?",
       answer:
-        "Les rendez-vous se prennent en ligne sur Doctolib, pour une séance au cabinet ou en visio. Cliquez sur le bouton « Réserver sur Doctolib ».",
+        "Les rendez-vous se prennent en ligne sur Doctolib, pour une séance au cabinet ou en téléconsultation. Cliquez sur le bouton « Prendre rendez-vous ».",
     },
     {
-      question: "Où se trouve le nouveau cabinet ?",
+      question: "Où se trouve le cabinet ?",
       answer:
-        "Le cabinet n’est plus à Balma. Vous me retrouvez désormais au 22 boulevard des Pensées, 31240 Saint-Jean, au rez-de-chaussée, avec parking gratuit.",
+        "Le cabinet se situe au 22 boulevard des Pensées, 31240 Saint-Jean, près de Toulouse, au rez-de-chaussée, avec parking gratuit.",
     },
     {
-      question: "Proposez-vous des consultations en visio ?",
+      question: "Proposez-vous des consultations en téléconsultation ?",
       answer:
-        "Oui. Les premières séances et les suivis sont possibles au cabinet comme en visio, selon vos besoins.",
+        "Oui. Les consultations sont proposées au cabinet et en téléconsultation, selon votre situation et votre organisation.",
     },
     {
       question: "Quel est le tarif d’une séance ?",
       answer:
-        "La première consultation et les séances de suivi sont à 60 €, au cabinet comme en visio.",
+        "La consultation est à 60 € pour une heure, au cabinet comme en téléconsultation.",
     },
   ],
   accompagnement: [
     {
       question: "Qu’est-ce que la thérapie EMDR ?",
       answer:
-        "L’EMDR (Eye Movement Desensitization and Reprocessing) permet de retraiter des souvenirs traumatiques et des blocages émotionnels. Praticienne EMDR Europe, j’accompagne ce travail dans un cadre sécurisant.",
+        "L’EMDR (Eye Movement Desensitization and Reprocessing) est une approche thérapeutique permettant de travailler sur les conséquences psychologiques d’expériences difficiles ou traumatiques, afin qu’elles puissent progressivement être intégrées de manière plus apaisée.",
     },
     {
       question: "Qu’est-ce que l’hypnose ericksonienne ?",
       answer:
-        "C’est une hypnose douce, collaborative, qui s’appuie sur vos ressources inconscientes pour apaiser, transformer des schémas limitants et avancer à votre rythme.",
+        "L’hypnose ericksonienne s’appuie sur les ressources et les capacités naturelles de changement de chaque personne. Vous restez acteur ou actrice de la séance et conscient(e) de ce qui se passe.",
     },
     {
-      question: "Faut-il choisir entre EMDR et hypnose ?",
+      question: "Qu’est-ce que la thérapie des schémas ?",
       answer:
-        "Non. Selon votre situation, l’une ou l’autre approche — ou les deux — peut être proposée. Nous en parlons ensemble dès les premiers échanges.",
+        "Elle permet de mieux comprendre certains fonctionnements qui se répètent dans votre vie, notamment dans vos relations ou votre rapport à vous-même, et de travailler progressivement sur les besoins qui se trouvent derrière ces fonctionnements.",
     },
     {
       question: "Pour qui s’adresse l’accompagnement ?",
       answer:
-        "Je reçois notamment autour de la psychologie clinique, du psychotraumatisme, des troubles anxieux, de l’addictologie et de l’entretien motivationnel.",
+        "Je reçois les adultes au cabinet à Saint-Jean et en téléconsultation.",
     },
   ],
   cabinet: [
+    {
+      question: "Qui êtes-vous ?",
+      answer:
+        "Je suis Solène Mialot, psychologue clinicienne à Saint-Jean. Je reçois les adultes au cabinet et en téléconsultation, avec une approche intégrative (EMDR, thérapie des schémas, hypnose ericksonienne).",
+    },
     {
       question: "Comment se rendre au cabinet ?",
       answer:
@@ -84,40 +149,33 @@ export const FAQ = {
     },
     {
       question: "Y a-t-il un parking ?",
-      answer:
-        "Oui, un parking gratuit est disponible sur place.",
+      answer: "Oui, un parking gratuit est disponible sur place.",
     },
     {
       question: "Puis-je consulter à distance ?",
       answer:
-        "Oui. Les consultations en visio sont proposées pour une première séance comme pour un suivi.",
-    },
-    {
-      question: "Le cabinet est-il toujours à Balma ?",
-      answer:
-        "Non. Le cabinet a déménagé : je vous reçois désormais à Saint-Jean, et non plus à Balma.",
+        "Oui. Les consultations en téléconsultation sont proposées lorsque ce format correspond davantage à votre situation.",
     },
   ],
   infos: [
     {
-      question: "Quels sont les horaires ?",
-      answer:
-        "Mardi à vendredi de 9h00 à 17h00, samedi de 10h00 à 13h30. Fermé le dimanche et le lundi.",
-    },
-    {
       question: "Quel est le tarif des consultations ?",
       answer:
-        "60 € pour une première consultation ou une séance de suivi, au cabinet comme en visio.",
+        "60 € pour une consultation d’une heure, au cabinet comme en téléconsultation.",
     },
     {
       question: "Les séances sont-elles remboursées ?",
       answer:
-        "Les consultations ne sont pas prises en charge par l’Assurance Maladie. Certaines mutuelles peuvent proposer un remboursement.",
+        "Les consultations psychologiques ne sont pas prises en charge par l’Assurance Maladie. Certaines complémentaires santé proposent toutefois une participation. Il est conseillé de vous renseigner auprès de votre mutuelle.",
     },
     {
       question: "Quels moyens de paiement sont acceptés ?",
+      answer: "Espèces, virement et carte bancaire.",
+    },
+    {
+      question: "Quelle est la politique d’annulation ?",
       answer:
-        "Espèces, carte bancaire et virement.",
+        "Veuillez respecter un délai de 24 h pour tout report ou annulation. Passé ce délai, la séance est due.",
     },
   ],
 } satisfies Record<string, FaqItem[]>;

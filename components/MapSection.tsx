@@ -8,10 +8,10 @@ export function MapSection() {
           Accès
         </p>
         <h2 className="font-display mt-3 text-center text-4xl text-ink md:text-5xl">
-          Comment venir
+          Cabinet à Saint-Jean
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-center leading-relaxed text-muted">
-          {SITE.address.street}, {SITE.address.city}
+          {SITE.address.street}, {SITE.address.city}, près de Toulouse
           <br />
           {SITE.access}
         </p>

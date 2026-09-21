@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     template: "%s — Solène Mialot",
   },
   description:
-    "Psychologue clinicienne, praticienne EMDR Europe et hypnose ericksonienne. Consultations au cabinet et en visio. 22 boulevard des Pensées, 31240 Saint-Jean. Prise de rendez-vous sur Doctolib.",
+    "Psychologue clinicienne à Saint-Jean. Consultations au cabinet et en téléconsultation. EMDR, thérapie des schémas et hypnose ericksonienne. Prise de rendez-vous sur Doctolib.",
   openGraph: {
     title: "Solène Mialot — Psychologue clinicienne à Saint-Jean",
     description:
-      "Nouveau cabinet à Saint-Jean. Thérapie EMDR, hypnose ericksonienne, consultations au cabinet et en visio.",
+      "Cabinet à Saint-Jean et téléconsultation. Approche intégrative : EMDR, thérapie des schémas, hypnose ericksonienne.",
     locale: "fr_FR",
     type: "website",
     images: ["/flyer.jpg"],
@@ -60,7 +60,7 @@ const jsonLd = {
   },
   areaServed: "Saint-Jean",
   description:
-    "Psychologue clinicienne, praticienne EMDR Europe et hypnose ericksonienne. Consultations au cabinet et en visio.",
+    "Psychologue clinicienne à Saint-Jean. Consultations au cabinet et en téléconsultation. Approche intégrative : EMDR, thérapie des schémas et hypnose ericksonienne.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

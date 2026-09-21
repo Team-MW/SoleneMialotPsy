@@ -6,24 +6,25 @@ import { DoctolibButton } from "@/components/DoctolibButton";
 import { FAQ } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Accompagnement",
+  title: "Mon accompagnement",
   description:
-    "Thérapie EMDR Europe et hypnose ericksonienne. Un cadre bienveillant pour avancer à votre rythme.",
+    "Accompagnement psychologique personnalisé : psychothérapie, EMDR, hypnose ericksonienne et thérapie des schémas.",
 };
 
 export default function AccompagnementPage() {
   return (
     <main>
       <PageBanner
-        kicker="Accompagnement"
-        title="EMDR et hypnose ericksonienne"
-        text="Deux approches, un même cadre bienveillant, pour aborder vos difficultés et retrouver plus de liberté intérieure."
+        kicker="Mon accompagnement"
+        title="Un accompagnement psychologique personnalisé"
+        text="Chaque personne arrive avec son histoire, ses expériences et ses propres ressources. Je ne considère pas qu’une méthode unique puisse convenir à tout le monde."
       />
-      <Practices hideIntro />
+      <Practices />
       <section className="bg-cream py-16 text-center">
         <p className="font-display text-3xl text-ink">Prendre rendez-vous</p>
         <p className="mx-auto mt-3 max-w-md text-muted">
-          Réservez une séance au cabinet ou en visio, directement sur Doctolib.
+          Réservez une séance au cabinet ou en téléconsultation, directement sur
+          Doctolib.
         </p>
         <div className="mt-8 flex justify-center">
           <DoctolibButton variant="hero" />

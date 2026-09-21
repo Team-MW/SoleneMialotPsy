@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
 import { Faq } from "@/components/Faq";
 import { Infos } from "@/components/Infos";
+import { MapSection } from "@/components/MapSection";
 import { PageBanner } from "@/components/PageBanner";
 import { FAQ } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Infos pratiques",
+  title: "Tarifs et modalités",
   description:
-    "Horaires, tarifs et prise de rendez-vous sur Doctolib. Consultations à 60 €, au cabinet ou en visio.",
+    "Consultation à 60 € — 1 heure. Cabinet à Saint-Jean et téléconsultation. Prise de rendez-vous sur Doctolib.",
 };
 
 export default function InfosPage() {
   return (
     <main>
       <PageBanner
-        kicker="Infos pratiques"
-        title="Horaires, tarifs et rendez-vous"
-        text="Retrouvez les informations utiles pour organiser votre venue ou une séance en visio."
+        kicker="Tarifs et modalités"
+        title="Vous souhaitez commencer une thérapie ?"
+        text="Faire le premier pas n’est pas toujours évident. Vous n’avez pas besoin de savoir exactement ce qui ne va pas pour prendre rendez-vous."
       />
       <Infos hideIntro />
+      <MapSection />
       <Faq items={FAQ.infos} />
     </main>
   );

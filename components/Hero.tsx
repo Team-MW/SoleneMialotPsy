@@ -50,7 +50,7 @@ export function Hero() {
       <div className="mx-auto grid max-w-[90rem] items-stretch lg:grid-cols-[minmax(0,1.35fr)_minmax(300px,0.72fr)]">
         <div className="relative z-10 flex flex-col items-center px-5 pb-12 pt-6 text-center sm:px-10 lg:px-12 lg:pb-12 lg:pt-16">
           <p className="font-hand mb-1 text-2xl text-gold-deep sm:absolute sm:right-8 sm:top-14 sm:rotate-[-8deg] lg:right-4">
-            Mon cabinet déménage&nbsp;!
+            Bienvenue
             <HeartIcon className="ml-1 inline h-4 w-4 align-[-2px] text-gold" />
           </p>
 
@@ -60,12 +60,16 @@ export function Hero() {
           <p className="mt-4 text-[10px] font-medium uppercase tracking-[0.42em] text-ink sm:text-[11px]">
             {SITE.role}
           </p>
-          <p className="mt-3 max-w-md text-[15px] leading-relaxed text-muted">
+          <p className="mt-3 max-w-lg text-[15px] leading-relaxed text-muted">
             {SITE.tagline}
+          </p>
+          <p className="mt-4 max-w-md text-[15px] leading-relaxed text-ink/80">
+            Un espace pour déposer ce qui pèse, comprendre ce qui se joue et
+            avancer à votre rythme.
           </p>
           <OliveSprig className="mt-3 h-8 w-16" />
 
-          <p className="mt-8 text-lg text-ink">Retrouvez-moi désormais à</p>
+          <p className="mt-8 text-lg text-ink">Cabinet à Saint-Jean</p>
 
           <a
             href={SITE.address.maps}
@@ -117,7 +121,7 @@ export function Hero() {
             <p className="font-hand text-[1.65rem] leading-tight sm:text-3xl">
               Consultations au cabinet
               <br />
-              et en visio
+              et en téléconsultation
             </p>
             <LaptopIcon className="h-11 w-11 text-sage-deep sm:h-12 sm:w-12" />
           </div>

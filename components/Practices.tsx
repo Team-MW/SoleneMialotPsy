@@ -2,16 +2,28 @@ import { EyeIcon, LotusIcon } from "@/components/Icons";
 
 const practices = [
   {
-    title: "Thérapie EMDR",
+    title: "Psychothérapie",
+    icon: LotusIcon,
+    tone: "gold" as const,
+    text: "Un espace d’écoute et de réflexion pour mieux comprendre vos difficultés, vos émotions, vos relations et certains fonctionnements qui peuvent se répéter.",
+  },
+  {
+    title: "EMDR",
     icon: EyeIcon,
     tone: "sage" as const,
-    text: "Praticienne EMDR Europe, j’accompagne le traitement des souvenirs traumatiques, du stress post-traumatique et des blocages émotionnels. Les mouvements oculaires aident le psychisme à retraiter ce qui reste figé, pour retrouver plus de liberté intérieure.",
+    text: "L’EMDR (Eye Movement Desensitization and Reprocessing) est une approche thérapeutique permettant de travailler sur les conséquences psychologiques d’expériences difficiles ou traumatiques. Certains événements peuvent continuer à provoquer des émotions, des sensations ou des réactions importantes longtemps après leur survenue. L’EMDR vise à favoriser le retraitement de ces expériences afin qu’elles puissent progressivement être intégrées d’une manière plus apaisée. Cette approche peut notamment être proposée lorsqu’un événement passé continue à avoir un impact sur votre vie actuelle.",
   },
   {
     title: "Hypnose ericksonienne",
     icon: LotusIcon,
     tone: "gold" as const,
-    text: "L’hypnose ericksonienne s’appuie sur vos ressources inconscientes. Dans un cadre respectueux et collaboratif, elle permet d’apaiser, de transformer des schémas limitants et d’avancer à votre rythme.",
+    text: "L’hypnose ericksonienne est une approche thérapeutique qui s’appuie sur les ressources et les capacités naturelles de changement de chaque personne. Contrairement à l’image parfois véhiculée par l’hypnose de spectacle, l’hypnose thérapeutique ne consiste pas à perdre le contrôle. Vous restez acteur ou actrice de la séance et conscient(e) de ce qui se passe. L’hypnose peut notamment être intégrée à un accompagnement psychologique autour de l’anxiété, du stress, des émotions, de la confiance en soi ou de certains changements que vous souhaitez mettre en place.",
+  },
+  {
+    title: "Thérapie des schémas",
+    icon: EyeIcon,
+    tone: "sage" as const,
+    text: "La thérapie des schémas permet de mieux comprendre certains fonctionnements qui se répètent dans notre vie, notamment dans nos relations, notre rapport à nous-même ou notre manière de réagir face aux situations difficiles. Elle permet notamment d’identifier des schémas construits au cours de notre histoire et de travailler progressivement sur les besoins qui se trouvent derrière ces fonctionnements.",
   },
 ];
 
@@ -22,20 +34,41 @@ export function Practices({ hideIntro = false }: { hideIntro?: boolean }) {
         {hideIntro ? null : (
           <>
             <p className="text-center text-[11px] font-medium uppercase tracking-[0.38em] text-sage-dark">
-              Accompagnement
+              Mon accompagnement
             </p>
             <h2 className="font-display mt-3 text-center text-4xl text-ink md:text-5xl">
-              Deux approches, un même cadre bienveillant
+              Un accompagnement psychologique personnalisé
             </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-center leading-relaxed text-muted">
-              Je vous reçois pour un espace de parole et de soin, afin d’aborder vos
-              difficultés, mieux comprendre votre fonctionnement psychique et
-              réfléchir à l’évolution que vous souhaitez donner à votre vie.
-            </p>
+            <div className="mx-auto mt-6 max-w-2xl space-y-4 text-center leading-relaxed text-muted">
+              <p>
+                Chaque personne arrive avec son histoire, ses expériences et ses
+                propres ressources.
+              </p>
+              <p>
+                Je ne considère pas qu’une méthode unique puisse convenir à tout
+                le monde. L’accompagnement est donc construit progressivement en
+                fonction de votre demande et de vos besoins.
+              </p>
+              <p>
+                Les premières consultations permettent de faire connaissance, de
+                comprendre ce qui vous amène et de définir ensemble les
+                objectifs du travail thérapeutique.
+              </p>
+              <p>
+                Selon votre situation, différentes approches peuvent être
+                proposées ou associées.
+              </p>
+            </div>
           </>
         )}
 
-        <div className={hideIntro ? "mt-0 grid gap-6 md:grid-cols-2" : "mt-14 grid gap-6 md:grid-cols-2"}>
+        <div
+          className={
+            hideIntro
+              ? "mt-0 grid gap-6 md:grid-cols-2"
+              : "mt-14 grid gap-6 md:grid-cols-2"
+          }
+        >
           {practices.map((practice) => {
             const Icon = practice.icon;
             const isSage = practice.tone === "sage";
@@ -61,23 +94,6 @@ export function Practices({ hideIntro = false }: { hideIntro?: boolean }) {
             );
           })}
         </div>
-
-        <ul className="mt-12 flex flex-wrap justify-center gap-3">
-          {[
-            "Psychologie clinique",
-            "Psychotraumatologie",
-            "Troubles anxieux",
-            "Addictologie",
-            "Entretien motivationnel",
-          ].map((item) => (
-            <li
-              key={item}
-              className="rounded-full border border-sand bg-white px-4 py-2 text-sm text-sage-deep"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );

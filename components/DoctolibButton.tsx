@@ -30,7 +30,7 @@ export function DoctolibButton({ variant = "section" }: { variant?: Variant }) {
       target="_blank"
       rel="noopener noreferrer"
       className={size.wrap}
-      aria-label="Réserver sur Doctolib"
+      aria-label="Prendre rendez-vous sur Doctolib"
     >
       <Image
         src="/doctolib.png"
@@ -39,7 +39,7 @@ export function DoctolibButton({ variant = "section" }: { variant?: Variant }) {
         height={80}
         className={size.logo}
       />
-      <span className={size.label}>Réserver sur Doctolib</span>
+      <span className={size.label}>Prendre rendez-vous</span>
     </a>
   );
 }
