@@ -9,10 +9,10 @@ export function Cabinet({ hideIntro = false }: { hideIntro?: boolean }) {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] shadow-[0_24px_60px_rgba(58,55,47,0.12)]">
             <Image
-              src="/flyer.jpg"
-              alt="Solène Mialot, psychologue clinicienne"
+              src="/gallery-1.jpg"
+              alt="Cabinet de Solène Mialot, psychologue clinicienne"
               fill
-              className="object-cover object-top"
+              className="object-cover object-center"
               sizes="(min-width: 1024px) 40vw, 100vw"
               priority
             />
@@ -32,11 +32,6 @@ export function Cabinet({ hideIntro = false }: { hideIntro?: boolean }) {
             <div
               className={`${hideIntro ? "mt-0" : "mt-5"} space-y-4 leading-relaxed text-muted`}
             >
-              <p>
-                Je suis Solène Mialot, psychologue clinicienne à Saint-Jean. Je
-                reçois les adultes au cabinet à Saint-Jean et en
-                téléconsultation.
-              </p>
               <p>
                 Mon parcours m’a progressivement amenée à m’intéresser à la
                 manière dont nos expériences, notre histoire personnelle et nos

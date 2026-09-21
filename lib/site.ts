@@ -20,7 +20,7 @@ export const SITE = {
   price: "60 €",
   duration: "1 heure",
   payment: "Espèces, virement, carte bancaire",
-  access: "Rez-de-chaussée, parking gratuit",
+  access: "Rez-de-chaussée — places disponibles pour la patientèle devant le cabinet",
   public: "Adultes",
 } as const;
 
@@ -102,7 +102,7 @@ export const FAQ = {
     {
       question: "Où se trouve le cabinet ?",
       answer:
-        "Le cabinet se situe au 22 boulevard des Pensées, 31240 Saint-Jean, près de Toulouse, au rez-de-chaussée, avec parking gratuit.",
+        "Le cabinet se situe au 22 boulevard des Pensées, 31240 Saint-Jean, près de Toulouse, au rez-de-chaussée. Des places sont disponibles pour la patientèle devant le cabinet.",
     },
     {
       question: "Proposez-vous des consultations en téléconsultation ?",
@@ -150,7 +150,8 @@ export const FAQ = {
     },
     {
       question: "Y a-t-il un parking ?",
-      answer: "Oui, un parking gratuit est disponible sur place.",
+      answer:
+        "Oui, des places sont disponibles pour la patientèle devant le cabinet.",
     },
     {
       question: "Puis-je consulter à distance ?",
