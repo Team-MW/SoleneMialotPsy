@@ -88,10 +88,12 @@ export function HomeSections() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] shadow-[0_24px_60px_rgba(58,55,47,0.12)]">
             <Image
-              src="/room.jpg"
-              alt="Espace d'accueil du cabinet, fauteuil et lumière douce"
+              src="/gallery-2.jpg"
+              alt="Cabinet de psychologie — espace de consultation chaleureux"
               fill
-              className="object-cover object-[80%_center]"
+              quality={75}
+              loading="lazy"
+              className="object-cover object-center"
               sizes="(min-width: 1024px) 40vw, 100vw"
             />
           </div>

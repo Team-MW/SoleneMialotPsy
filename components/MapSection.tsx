@@ -1,4 +1,5 @@
 import { SITE } from "@/lib/site";
+import { LazyMap } from "@/components/LazyMap";
 
 export function MapSection() {
   return (
@@ -15,15 +16,7 @@ export function MapSection() {
           <br />
           {SITE.access}
         </p>
-        <div className="mt-10 overflow-hidden rounded-[2rem] border border-sand bg-ivory shadow-[0_12px_40px_rgba(58,55,47,0.06)]">
-          <iframe
-            title="Carte du cabinet, 22 boulevard des Pensées à Saint-Jean"
-            src={SITE.address.embed}
-            className="h-[28rem] w-full"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
+        <LazyMap />
       </div>
     </section>
   );

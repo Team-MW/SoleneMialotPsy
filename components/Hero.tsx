@@ -1,5 +1,10 @@
-import Image from "next/image";
-import { OliveBranch, OliveSprig, SageBlob } from "@/components/Botanical";
+import {
+  FloatingLeaf,
+  GrassTuft,
+  OliveBranch,
+  OliveSprig,
+  SageBlob,
+} from "@/components/Botanical";
 import { DoctolibButton } from "@/components/DoctolibButton";
 import {
   ArrowCurve,
@@ -11,74 +16,91 @@ import {
 } from "@/components/Icons";
 import { SITE } from "@/lib/site";
 
-function CabinetPhoto({ className = "" }: { className?: string }) {
-  return (
-    <div className={`overflow-hidden ${className}`}>
-      <Image
-        src="/room.jpg"
-        alt="Espace d'accueil du cabinet, fauteuil et lumière douce"
-        fill
-        priority
-        className="object-cover object-[72%_42%]"
-        sizes="(min-width: 1024px) 48vw, 100vw"
-      />
-    </div>
-  );
-}
-
 export function Hero() {
   return (
     <section
       id="accueil"
       className="relative isolate overflow-hidden bg-cream pt-[4.6rem]"
     >
-      <div className="pointer-events-none absolute -left-6 top-20 z-20 w-36 sway md:w-48 lg:w-56">
+      {/* Branches & herbes — gauche */}
+      <div className="pointer-events-none absolute -left-6 top-16 z-20 w-36 sway md:w-48 lg:top-20 lg:w-56">
         <OliveBranch />
+      </div>
+      <div className="pointer-events-none absolute -left-2 top-[42%] z-10 w-24 opacity-80 sway-delayed sm:w-28 md:left-2">
+        <OliveBranch className="rotate-[-8deg]" />
+      </div>
+      <div className="pointer-events-none absolute bottom-4 left-2 z-20 w-28 sway-soft md:left-8 md:w-36">
+        <GrassTuft />
       </div>
       <div className="pointer-events-none absolute -bottom-24 -left-16 z-0 w-[24rem] opacity-90">
         <SageBlob />
       </div>
-      <div className="pointer-events-none absolute bottom-6 left-4 z-20 w-32 sway md:left-10 md:w-40">
-        <OliveBranch className="rotate-12" />
+
+      {/* Branches & herbes — droite */}
+      <div className="pointer-events-none absolute -right-4 top-24 z-10 w-32 sway-delayed opacity-90 sm:w-40 lg:top-28 lg:w-52">
+        <OliveBranch className="-scale-x-100" />
+      </div>
+      <div className="pointer-events-none absolute right-0 top-[48%] z-10 hidden w-28 opacity-75 sway lg:block xl:w-36">
+        <OliveBranch className="-scale-x-100 rotate-6" />
+      </div>
+      <div className="pointer-events-none absolute bottom-6 right-2 z-20 w-28 sway-soft md:right-10 md:w-40">
+        <GrassTuft className="-scale-x-100" />
+      </div>
+      <div className="pointer-events-none absolute -bottom-20 -right-10 z-0 w-[20rem] opacity-70">
+        <SageBlob />
       </div>
 
-      <div className="relative h-56 sm:h-72 lg:hidden">
-        <CabinetPhoto className="absolute inset-0 rounded-b-[2.5rem]" />
-        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-cream to-transparent" />
+      {/* Feuilles flottantes */}
+      <div className="pointer-events-none absolute left-[18%] top-[28%] z-10 hidden drift md:block">
+        <FloatingLeaf className="h-10 w-7 opacity-70" />
+      </div>
+      <div
+        className="pointer-events-none absolute right-[20%] top-[36%] z-10 hidden drift lg:block"
+        style={{ animationDelay: "1.4s" }}
+      >
+        <FloatingLeaf className="h-8 w-6 rotate-12 opacity-60" />
+      </div>
+      <div
+        className="pointer-events-none absolute bottom-[22%] left-[22%] z-10 drift"
+        style={{ animationDelay: "2.2s" }}
+      >
+        <FloatingLeaf className="h-7 w-5 -rotate-12 opacity-50" />
       </div>
 
-      <div className="mx-auto grid max-w-[90rem] items-stretch lg:grid-cols-[minmax(0,1.35fr)_minmax(300px,0.72fr)]">
-        <div className="relative z-10 flex flex-col items-center px-5 pb-12 pt-6 text-center sm:px-10 lg:px-12 lg:pb-12 lg:pt-16">
-          <p className="font-hand mb-1 text-2xl text-gold-deep sm:absolute sm:right-8 sm:top-14 sm:rotate-[-8deg] lg:right-4">
+      <div className="relative z-10 mx-auto flex w-full max-w-3xl justify-center px-5 py-12 text-center sm:px-10 lg:min-h-[calc(100svh-4.6rem)] lg:items-center lg:py-16">
+        <div className="mx-auto flex w-full max-w-xl flex-col items-center text-center">
+          <p className="font-hand fade-up mb-1 text-2xl text-gold-deep">
             Bienvenue
             <HeartIcon className="ml-1 inline h-4 w-4 align-[-2px] text-gold" />
           </p>
 
-          <h1 className="font-script mt-4 text-[3.6rem] leading-[0.88] text-ink sm:mt-8 sm:text-7xl xl:text-[5.6rem]">
+          <h1 className="font-script fade-up-delay mt-2 w-full text-center text-[3.6rem] leading-[0.88] text-ink sm:text-7xl xl:text-[5.4rem]">
             {SITE.name}
           </h1>
-          <p className="mt-4 text-[10px] font-medium uppercase tracking-[0.42em] text-ink sm:text-[11px]">
+          <p className="fade-up-delay mt-4 w-full text-center text-[10px] font-medium uppercase tracking-[0.42em] text-ink sm:text-[11px]">
             {SITE.role}
           </p>
-          <p className="mt-3 max-w-lg text-[15px] leading-relaxed text-muted">
+          <p className="fade-up-delay-2 mt-3 w-full text-center text-[15px] leading-relaxed text-balance text-muted">
             {SITE.tagline}
           </p>
-          <p className="mt-4 max-w-md text-[15px] leading-relaxed text-ink/80">
+          <p className="fade-up-delay-2 mt-4 w-full max-w-md text-center text-[15px] leading-relaxed text-balance text-ink/80">
             Un espace pour déposer ce qui pèse, comprendre ce qui se joue et
             avancer à votre rythme.
           </p>
-          <OliveSprig className="mt-3 h-8 w-16" />
+          <OliveSprig className="fade-up-delay-3 mt-3 h-8 w-16 shrink-0" />
 
-          <p className="mt-8 text-lg text-ink">Cabinet à Saint-Jean</p>
+          <p className="fade-up-delay-3 mt-8 w-full text-center text-lg text-ink">
+            Cabinet à Saint-Jean
+          </p>
 
           <a
             href={SITE.address.maps}
             target="_blank"
             rel="noopener noreferrer"
-            className="brush-pill mt-3 inline-flex max-w-full items-center gap-3 bg-sage px-6 py-3.5 text-left text-white shadow-[0_8px_24px_rgba(90,102,76,0.18)] transition hover:bg-sage-dark sm:px-8"
+            className="brush-pill fade-up-delay-3 mt-3 inline-flex max-w-full items-center justify-center gap-3 bg-sage px-6 py-3.5 text-center text-white shadow-[0_8px_24px_rgba(90,102,76,0.18)] transition hover:bg-sage-dark sm:px-8"
           >
             <PinIcon className="h-6 w-6 shrink-0 sm:h-7 sm:w-7" />
-            <span>
+            <span className="text-center">
               <span className="block font-display text-lg leading-tight sm:text-2xl">
                 {SITE.address.street}
               </span>
@@ -88,13 +110,13 @@ export function Hero() {
             </span>
           </a>
 
-          <p className="mt-3 flex items-center gap-2 text-sm italic text-muted">
+          <p className="mt-3 flex w-full items-center justify-center gap-2 text-sm italic text-muted">
             <ArrowCurve className="h-8 w-10 text-sage-dark" />
             ({SITE.address.note})
           </p>
 
           <div className="mt-8 flex w-full max-w-md items-start justify-center gap-6 sm:gap-10">
-            <div className="flex flex-1 flex-col items-center">
+            <div className="flex flex-1 flex-col items-center text-center">
               <span className="flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full border border-sage/30 bg-white/70 text-sage-deep">
                 <EyeIcon />
               </span>
@@ -105,7 +127,7 @@ export function Hero() {
               </p>
             </div>
             <span className="mt-3 h-14 w-px bg-gold/80" />
-            <div className="flex flex-1 flex-col items-center">
+            <div className="flex flex-1 flex-col items-center text-center">
               <span className="flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full border border-gold/35 bg-white/70 text-gold-deep">
                 <LotusIcon />
               </span>
@@ -117,13 +139,13 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-3 text-ink">
-            <p className="font-hand text-[1.65rem] leading-tight sm:text-3xl">
+          <div className="mt-8 flex w-full items-center justify-center gap-3 text-ink">
+            <p className="font-hand text-center text-[1.65rem] leading-tight sm:text-3xl">
               Consultations au cabinet
               <br />
               et en téléconsultation
             </p>
-            <LaptopIcon className="h-11 w-11 text-sage-deep sm:h-12 sm:w-12" />
+            <LaptopIcon className="h-11 w-11 shrink-0 text-sage-deep sm:h-12 sm:w-12" />
           </div>
 
           <div className="relative mt-8">
@@ -132,15 +154,10 @@ export function Hero() {
             <DoctolibButton variant="hero" />
           </div>
 
-          <p className="font-hand mt-8 flex items-center gap-2 text-2xl text-ink">
+          <p className="font-hand mt-8 flex items-center justify-center gap-2 text-2xl text-ink">
             Merci pour votre confiance
             <HeartIcon className="h-4 w-4 text-gold" />
           </p>
-        </div>
-
-        <div className="relative hidden min-h-full lg:block">
-          <CabinetPhoto className="absolute inset-y-0 right-0 left-0 rounded-l-[46%]" />
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-cream to-transparent" />
         </div>
       </div>
     </section>

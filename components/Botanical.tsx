@@ -133,6 +133,110 @@ export function OliveSprig({ className = "" }: { className?: string }) {
   );
 }
 
+export function FloatingLeaf({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 40 56"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      <ellipse
+        cx="20"
+        cy="28"
+        rx="14"
+        ry="24"
+        transform="rotate(-18 20 28)"
+        fill="#7F8E68"
+        opacity="0.85"
+      />
+      <path
+        d="M20 8c2 12 2 24 0 40"
+        stroke="#5A664C"
+        strokeWidth="1"
+        strokeLinecap="round"
+        opacity="0.5"
+      />
+    </svg>
+  );
+}
+
+export function GrassTuft({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 120 90"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      <path
+        d="M20 88c4-28 2-52-6-78"
+        stroke="#6E7B5E"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M40 88c2-32 8-54 4-76"
+        stroke="#879575"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M58 88c-2-30 4-50 14-74"
+        stroke="#5A664C"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+      <path
+        d="M76 88c2-26 10-48 18-70"
+        stroke="#74825C"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+      />
+      <path
+        d="M94 88c-4-24 0-46 8-68"
+        stroke="#6E7B5E"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+      />
+      <ellipse
+        cx="18"
+        cy="22"
+        rx="10"
+        ry="5"
+        transform="rotate(-55 18 22)"
+        fill="#7F8E68"
+        opacity="0.9"
+      />
+      <ellipse
+        cx="48"
+        cy="18"
+        rx="11"
+        ry="5.5"
+        transform="rotate(12 48 18)"
+        fill="#5C684C"
+      />
+      <ellipse
+        cx="78"
+        cy="24"
+        rx="10"
+        ry="5"
+        transform="rotate(38 78 24)"
+        fill="#879575"
+      />
+      <ellipse
+        cx="102"
+        cy="28"
+        rx="9"
+        ry="4.5"
+        transform="rotate(50 102 28)"
+        fill="#6A7854"
+        opacity="0.85"
+      />
+    </svg>
+  );
+}
+
 export function SageBlob({ className = "" }: { className?: string }) {
   return (
     <svg

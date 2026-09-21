@@ -2,6 +2,7 @@ export const SITE = {
   name: "Solène Mialot",
   role: "Psychologue clinicienne",
   tagline: "Psychologue clinicienne à Saint-Jean – Cabinet et téléconsultation",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.solenemialot-psy.fr",
   doctolib: "https://www.doctolib.fr/psychologue/pin-balma/solene-mialot",
   address: {
     street: "22 boulevard des Pensées",

@@ -241,6 +241,8 @@ export function PhotoGallery() {
                       src={photo.src}
                       alt={photo.alt}
                       fill
+                      quality={70}
+                      loading="lazy"
                       className="object-cover"
                       sizes="(min-width: 768px) 40vw, 90vw"
                       style={{
@@ -346,6 +348,8 @@ export function PhotoGallery() {
                       src={photo.src}
                       alt={photo.alt}
                       fill
+                      quality={70}
+                      loading="lazy"
                       className="object-cover"
                       sizes="90vw"
                     />
